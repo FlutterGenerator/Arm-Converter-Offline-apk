@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 	//namespace 'com.arm.toolantik'
 
     defaultConfig {
         applicationId "com.arm.toolantik"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 32
         versionName "3.2"
 
