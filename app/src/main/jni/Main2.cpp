@@ -1,6 +1,6 @@
 #include <jni.h>
 #include <string>
-#include <keystone/keystone.h>
+#include <Keystone/keystone.h>
 #include <sstream>
 #include <iomanip>
 
