@@ -26,4 +26,5 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_LDLIBS := -llog
 LOCAL_CPPFLAGS += -std=c++17 -fexceptions -frtti
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384 -Wl,-z,common-page-size=16384
 include $(BUILD_SHARED_LIBRARY)
