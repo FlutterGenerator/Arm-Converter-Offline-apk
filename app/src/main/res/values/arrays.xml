@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conversion_modes">
+        <item>Hex => Assembly</item>
+        <item>Assembly => Hex</item>
+    </string-array>
+</resources>
