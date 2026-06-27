@@ -33,10 +33,10 @@ LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/keystone/include
 
 LOCAL_CFLAGS += -fno-integrated-as
-LOCAL_CFLAGS += -fPIC
+LOCAL_CFLAGS += -fPIC -fintegrated-as
 LOCAL_LDFLAGS += -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now
 LOCAL_LDLIBS := -llog
-LOCAL_CPPFLAGS += -std=c++17 -fexceptions -frtti -fPIC
+LOCAL_CPPFLAGS += -std=c++17 -fexceptions -frtti -fPIC -fintegrated-as
 LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384 -Wl,-z,common-page-size=16384
 
 include $(BUILD_SHARED_LIBRARY)
