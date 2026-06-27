@@ -17,7 +17,7 @@ Java_com_arm_toolantik_MainActivity_convertHexToArmFormats(JNIEnv *env, jobject 
     cs_err err;
 
 
-    err = cs_open(CS_ARCH_AARCH64, CS_MODE_ARM, &handle);
+    err = cs_open(CS_ARCH_ARM, CS_MODE_ARM, &handle);
     if (err != CS_ERR_OK) {
         env->ReleaseStringUTFChars(hexString, hex);
         delete[] code;
@@ -31,7 +31,7 @@ Java_com_arm_toolantik_MainActivity_convertHexToArmFormats(JNIEnv *env, jobject 
     }
     cs_close(&handle);
 
-    err = cs_open(CS_ARCH_ARM, CS_MODE_ARM, &handle);
+    err = cs_open(CS_ARCH_AARCH64, CS_MODE_ARM, &handle);
     count = cs_disasm(handle, code, len, 0x1000, 0, &insn);
     std::ostringstream arm64Result;
     for (size_t i = 0; i < count; i++) {
@@ -39,7 +39,7 @@ Java_com_arm_toolantik_MainActivity_convertHexToArmFormats(JNIEnv *env, jobject 
     }
     cs_close(&handle);
 
-    
+
     err = cs_open(CS_ARCH_ARM, CS_MODE_THUMB, &handle);
     count = cs_disasm(handle, code, len, 0x1000, 0, &insn);
     std::ostringstream thumbResult;
@@ -65,7 +65,7 @@ Java_com_arm_toolantik_MainActivity_convertHexToArmFormats(JNIEnv *env, jobject 
     }
     cs_close(&handle);
 
-    
+
     jobjectArray resultArray = env->NewObjectArray(5, env->FindClass("java/lang/String"), env->NewStringUTF(""));
 
 
