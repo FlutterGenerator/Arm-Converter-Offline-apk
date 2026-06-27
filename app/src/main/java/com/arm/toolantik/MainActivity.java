@@ -5,6 +5,8 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,12 +14,6 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.Color;
-import android.os.Build;
-import android.widget.*;
-import android.view.Window;
-import android.view.WindowManager;
 
 public class MainActivity extends Activity {
 

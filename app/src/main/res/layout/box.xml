@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
@@ -14,7 +15,8 @@
 		android:id="@+id/hhhhhhb"
 		android:textColor="#FFFFFF"
 		android:textSize="16sp"
-		android:textStyle="bold"/>
+		android:textStyle="bold"
+		tools:ignore="HardcodedText" />
 
 	<RelativeLayout
 		android:layout_width="match_parent"
@@ -26,12 +28,14 @@
 			android:id="@+id/hexCodeInput"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginEnd="50dp"
+			android:background="@android:color/transparent"
+			android:minHeight="48dp"
 			android:padding="10dp"
+			android:scrollbars="vertical"
 			android:text="00 00 80 D2"
 			android:textSize="16sp"
-			android:background="@android:color/transparent"
-			android:scrollbars="vertical"
-			android:layout_marginEnd="50dp"/>
+			tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,VisualLintTextFieldSize" />
 
 		<LinearLayout
 			android:layout_width="wrap_content"
@@ -45,24 +49,27 @@
 				android:layout_width="40dp"
 				android:layout_height="40dp"
 				android:background="@android:color/transparent"
+				android:contentDescription="Copy"
 				android:src="@drawable/ic_content_copy"
-				android:contentDescription="Copy"/>
+				tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
 			<ImageButton
 				android:id="@+id/btnClipboard"
 				android:layout_width="40dp"
 				android:layout_height="40dp"
 				android:background="@android:color/transparent"
+				android:contentDescription="Clipboard"
 				android:src="@drawable/ic_content_paste"
-				android:contentDescription="Clipboard"/>
+				tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
 			<ImageButton
 				android:id="@+id/btnClose"
 				android:layout_width="40dp"
 				android:layout_height="40dp"
 				android:background="@android:color/transparent"
+				android:contentDescription="Close"
 				android:src="@drawable/ic_close"
-				android:contentDescription="Close"/>
+				tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
 		</LinearLayout>
 

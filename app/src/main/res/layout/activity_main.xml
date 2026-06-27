@@ -1,15 +1,16 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
 	android:id="@+id/hhhhhh"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
     <ScrollView
-		xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:fillViewport="true">
+		android:layout_height="wrap_content"
+		android:fillViewport="true"
+		tools:ignore="NestedScrolling">
 
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -32,9 +33,10 @@
 				<Spinner
 					android:id="@+id/commandSpinner"
 					android:layout_width="match_parent"
-					android:gravity="center"
 					android:layout_height="wrap_content"
-					android:entries="@array/conversion_modes"/>
+					android:entries="@array/conversion_modes"
+					android:gravity="center"
+					tools:ignore="TouchTargetSizeCheck" />
 			</LinearLayout>
 
 			<TextView
@@ -43,10 +45,11 @@
 				android:layout_height="30dp"
 				android:layout_marginTop="25dp"
 				android:background="@drawable/button"
+				android:gravity="center"
 				android:text="CONVERT GCC"
 				android:textColor="#FFFFFF"
-				android:textSize="16dp"
-				android:gravity="center"/>
+				android:textSize="16sp"
+				tools:ignore="HardcodedText,TextSizeCheck" />
 
 			<include
 				layout="@layout/box2"

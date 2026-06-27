@@ -1,5 +1,13 @@
 LOCAL_PATH := $(call my-dir)
 
+# Capstone: 6.0.0-Alpha9
+# Keystone: 0.9.2
+# NDK: 23.1.7779620
+# Android Platform: android-19
+# https://github.com/FlutterGenerator/keystone-capstone-android/releases/tag/keystone-capstone-android-28274132389
+# Gradle 7.5-bin
+# AGP 7.4.2
+# Modded by tojik_proof_93 @FlutterGenerator
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := capstone
@@ -24,8 +32,11 @@ LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/capstone/include \
     $(LOCAL_PATH)/keystone/include
 
+LOCAL_CFLAGS += -fno-integrated-as
+LOCAL_CFLAGS += -fPIC
+LOCAL_LDFLAGS += -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now
 LOCAL_LDLIBS := -llog
-LOCAL_CPPFLAGS += -std=c++17 -fexceptions -frtti
+LOCAL_CPPFLAGS += -std=c++17 -fexceptions -frtti -fPIC
 LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384 -Wl,-z,common-page-size=16384
-LOCAL_LDFLAGS += -Wl,-z,notext
+
 include $(BUILD_SHARED_LIBRARY)
